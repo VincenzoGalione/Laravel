@@ -1,0 +1,8 @@
+.title{
+    color: blue;
+}
+
+.bg-background{
+    background-image:url('/assets-cached.jpg');
+    background-position: center;
+}
