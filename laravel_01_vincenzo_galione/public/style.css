@@ -1,0 +1,28 @@
+.text-color{
+color: yellow;
+}
+
+.text-color1{
+    color: black;
+    }
+
+.bg-background{
+    background-image: url(/media/assets-cached.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-background1{
+    background-image: url(/media/img2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-background2{
+    background-image: url(/media/img3.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
