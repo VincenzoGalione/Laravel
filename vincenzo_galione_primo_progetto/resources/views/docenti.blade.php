@@ -34,22 +34,23 @@
 
     
 
-    <div class="container-fluid  bg-background">
+    <div class="container-fluid bg-background">
         <div class="row h-75 justify-content-center align-items-center ">
             <div class="col-12 py-5">
                 <h1 class="text-center diplay-4 title">
-                    I nostri studenti
+                    I nostri docenti
                 </h1>
             </div>
         </div>
         <div class="row  justify-content-center align-items-center  title ">
-            @foreach ($students as $student )
+            @foreach ($teachers as $teacher )
                 <div class="col-12 col-md-3 my-3">
                     <div class="card mx-auto" style="width: 18rem;">
                         <img src="https://picsum.photos/100" class="card-img-top" alt="immagini random">
                         <div class="card-body">
-                          <h5 class="card-title">{{$student['name']}} {{$student['surname']}}</h5>
-                          <a href="{{route('student.detail', ['id' => $student['id']])}}" class="btn btn-primary">Vai al dettaglio</a>
+                          <h5 class="card-title">{{$teacher['name']}} {{$teacher['surname']}}</h5>
+                          <p class="card-text">{{$teacher['subject']}}</p>
+                          <a href="{{route('teacher.detail', ['name' => $teacher['name']])}}" class="btn btn-primary">Vai al dettaglio</a>
                         </div>
                       </div>
                 </div>

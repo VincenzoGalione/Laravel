@@ -3,6 +3,12 @@
 }
 
 .bg-background{
-    background-image:url('/assets-cached.jpg');
+    background-image:url(/assets-cached.jpg)!important;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
 }
+
+
+
+    

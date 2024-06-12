@@ -1,21 +1,24 @@
 <?php
 
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\TeachersController;
 use Illuminate\Support\Facades\Route;
+//file di routing
 
-Route::get('/', function () {
-    $title = 'Ciao a tutti';
-    return view('welcome', ['titolo'=>$title]); //passaggio di dati alla vista
-    //chiave dell'array - NOME DELLA VARIABILE SULLA VISTA
-    //valore - il dato in sè
-});
 
-Route::get('/chi-siamo', function () {
-    $arrayStudents = [
-        ['name'=>'Leonardo', 'surname'=>'Di Napoli'],
-        ['name'=>'Andrea', 'surname'=>'Asaro'],
-        ['name'=>'Michele', 'surname'=>'Sette'],
-        ['name'=>'Emanuele', 'surname'=>'Pelliccia'],
-    ];
-    return view('chiSiamo', ['students'=>$arrayStudents]);
-});
 
+// ROTTA NOMINALE
+Route::get('/', [PublicController::class, 'homepage'])->name('homepage');        //concatenamento metodo etichetta dove all'interno si inserisce una stringa, non serve che corrisponda al nome della vista, è solo un etichetta che serve per richiamarla
+// metodo name()per dare il nome ad una rotta
+
+//Studenti
+Route::get('/about-us',[PublicController::class,'chiSiamo'])->name('chi.siamo');
+Route::get('/studenti/dettaglio/{id}', [PublicController::class, 'dettaglio'])->name('student.detail');
+
+// Docenti
+Route::get('/docenti', [TeachersController::class, 'docenti'])->name('teachers');
+// pagina di dettaglio dei docenti
+
+
+//! ROTTA PARAMETRICA - rotta che accetta un parametro
+Route::get('/docenti/dettaglio/{name}', [TeachersController::class, 'dettaglio'])->name('teacher.detail');
