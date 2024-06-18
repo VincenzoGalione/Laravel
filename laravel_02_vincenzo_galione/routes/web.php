@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');        
 
 //Studenti
-Route::get('/about-us',[PublicController::class,'chiSiamo'])->name('chi.siamo');
+Route::get('/chi-siamo',[PublicController::class,'chiSiamo'])->name('chi.siamo');
 
 // rotta parametrica
 Route::get('/studenti/dettaglio/{id}', [PublicController::class, 'dettaglio'])->name('student.detail');

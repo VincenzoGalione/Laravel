@@ -3,10 +3,15 @@
 }
 
 .bg-background{
-    background-image:url(/assets-cached.jpg)!important;
+    background-image:url(../../public/media/assets-cached.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.active-custom{
+    color: red !important;
+    font-weight:bold ;
 }
 
 
