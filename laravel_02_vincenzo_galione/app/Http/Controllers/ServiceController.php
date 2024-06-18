@@ -14,6 +14,7 @@ class ServiceController extends Controller
     public function servizioDisponibile(){
       return view('servizioDisponibile', ['servizi' =>$this->arrayServices]);
     }
+    
 
     public function dettaglio($id){
         foreach ($this->arrayServices as $service) {
