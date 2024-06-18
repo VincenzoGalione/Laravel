@@ -18,7 +18,7 @@ class PublicController extends Controller
         $title = 'Ciao a tutti';
         return view('welcome', ['titolo'=>$title]); //passaggio di dati alla vista
         //chiave dell'array - NOME DELLA VARIABILE SULLA VISTA
-        //valore - il dato in sè
+        //valore - il dato in sè.
     }
 
     public function chiSiamo() {
